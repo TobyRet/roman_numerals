@@ -8,17 +8,15 @@ ROMAN = {
   1000 => 'M'
 }
 
-def convert(number)
-  @number = number
-  return_value = []
+def convert(number)   
+  roman_numeral = "" 
 
-  ROMAN.map{|k,v| k}.sort.reverse.each do |tier|
-    factor = @number / tier
-    if factor >= 1
-      @number = @number - (factor * tier)
-      factor.times {|n| return_value << ROMAN[tier]}
-    end
+  ROMAN.keys.reverse.each do |tier| 
+    factor = number / tier 
+      number -= factor * tier
+      roman_numeral += ROMAN[tier] * factor
   end
-return_value.join
+  roman_numeral
 end
 
+puts convert(2224)
