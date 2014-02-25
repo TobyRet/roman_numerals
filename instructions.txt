@@ -1,0 +1,40 @@
+How to convert arabic number to roman numerals
+
+1. Define the number you want to convert. E.g. "I want to convert 123 to a roman numeral"
+
+
+2. Break up the number you wish to convert into its compent parts as specified by the table of roman numerals starting with the largest value first (100's, 50, 10's and 1's)
+
+	Table of roman numerals
+
+		1 = 'I'
+	  	5 = 'V'
+	  	10 = 'X'
+	  	50 = 'L'
+	  	100 = 'C'
+	  	1000 = 'M'
+
+
+ 	eg 123 equals
+
+	 	1 * 100
+		2 * 20
+		3 * 1
+
+
+
+4. Look up the table and assign roman numerals to the list of components
+
+	1 * 100 = 100 = M
+	0 * 50 = 0 = Nothing
+	2 * 10 = 20 = XX
+	3 * 1 = 3 = III
+
+5. Join the roman numerals together from largest to smallest
+
+	MXXIII
+
+6. Note that you cannot have more than three of the same character listed in a row. e.g XXXX
+   Instead get to that same number by subtracting from the next highest value character. The smallest of the two characters goes on the left.
+
+   49 = XLIX
