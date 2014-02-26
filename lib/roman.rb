@@ -1,4 +1,3 @@
-
 ROMAN = {
   1 => 'I',
   4 => 'IV',
@@ -24,5 +23,3 @@ def convert(number)
   end
   roman_numeral
 end
-
-puts convert(44)
